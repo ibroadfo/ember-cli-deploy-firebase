@@ -41,11 +41,14 @@
     "loader.js": "^4.0.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli-deploy-plugin",
+    "firebase"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5",
-    "ember-cli-deploy-plugin": "^0.2.2"
+    "ember-cli-deploy-plugin": "^0.2.2",
+    "rsvp": "^3.2.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

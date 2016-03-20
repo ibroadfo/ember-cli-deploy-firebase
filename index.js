@@ -14,7 +14,17 @@ module.exports = {
       },
 
       upload: function(context) {
-        //do something here to actually deploy your app somewhere
+        var Promise = require('rsvp').Promise;
+        let outer = this;
+        return new Promise(function(resolve, reject) {
+          let foo = require('child_process').spawn('firebase', ['deploy']);
+          foo.stdout.on('data', (data) => {
+            outer.log(data);
+          });
+          foo.stderr.on('data', (data) => {
+            outer.log(data);
+          });
+        });
       },
 
       didDeploy: function(context) {
