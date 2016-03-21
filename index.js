@@ -9,10 +9,6 @@ module.exports = {
     var DeployPlugin = BasePlugin.extend({
       name: options.name,
 
-      didBuild: function(context) {
-        //do something amazing here once the project has been built
-      },
-
       upload: function(context) {
         const outer = this;
         return require('firebase-tools').deploy({
@@ -27,10 +23,6 @@ module.exports = {
           outer.log(err);
         });
       },
-
-      didDeploy: function(context) {
-        //do something here like notify your team on slack
-      }
     });
 
     return new DeployPlugin();
