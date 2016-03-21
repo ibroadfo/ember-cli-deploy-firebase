@@ -14,16 +14,14 @@ module.exports = {
       },
 
       upload: function(context) {
-        var Promise = require('rsvp').Promise;
+        var client = require('firebase-tools');
         let outer = this;
-        return new Promise(function(resolve, reject) {
-          let foo = require('child_process').spawn('firebase', ['deploy']);
-          foo.stdout.on('data', (data) => {
-            outer.log(data);
-          });
-          foo.stderr.on('data', (data) => {
-            outer.log(data);
-          });
+        return client.deploy({cwd:'.'}).then(function() {
+          outer.log('it worked yay');
+        }).catch(function(err) {
+          // handle error
+          outer.log('something bad happened oh no');
+          outer.log(err);
         });
       },
 
