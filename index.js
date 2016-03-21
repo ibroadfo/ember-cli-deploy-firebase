@@ -10,8 +10,8 @@ module.exports = {
       name: options.name,
 
       upload: function(context) {
-        let outer = this;
-        let options = {
+        var outer = this;
+        var options = {
           firebase: context.config.fireBaseAppName,
           public: context.config.build.outputPath,
         };
