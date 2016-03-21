@@ -22,8 +22,8 @@ module.exports = {
           outer.log('it worked yay');
         }).catch(function(err) {
           // handle error
-          outer.log('something bad happened oh no');
-          outer.log(err);
+          outer.log('something bad happened oh no', { color: 'red' });
+          outer.log(err, { color: 'red' });
         });
       },
     });
