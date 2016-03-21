@@ -53,7 +53,7 @@ For detailed information on how configuration of plugins works, please refer to 
 
 ### fireBaseAppName
 
-The name of the firebase app you want to deploy to. If not specified, firebase will pick this up from the `firebase.json` file it created in your project directory.
+The name of the firebase app you want to deploy to. If not specified, firebase-tools will pick this up from the `firebase.json` file it created in your project directory.
 
 ```
 ENV["firebase"] = {
