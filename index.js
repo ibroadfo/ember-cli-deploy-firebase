@@ -11,11 +11,14 @@ module.exports = {
 
       upload: function(context) {
         const outer = this;
-        return require('firebase-tools').deploy({
-          message: context.revisionData.revisionKey,
+        const options = {
           firebase: context.config.fireBaseAppName,
           public: context.config.build.outputPath,
-        }).then(function() {
+        };
+        if(context.revisionData){
+          options.message = context.revisionData.revisionKey;
+        }
+        return require('firebase-tools').deploy(options).then(function() {
           outer.log('it worked yay');
         }).catch(function(err) {
           // handle error
