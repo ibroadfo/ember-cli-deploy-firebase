@@ -51,7 +51,10 @@ For detailed information on what plugin hooks are and how they work, please refe
 
 For detailed information on how configuration of plugins works, please refer to the [Plugin Documentation][1].
 
-### Defaults
+### fireBaseAppName
+
+The name of the firebase app you want to deploy to. If not specified, firebase will pick this up from the `firebase.json` file it created in your project directory.
+
 ```
 ENV["firebase"] = {
   fireBaseAppName: 'your-firebase-app-name'
