@@ -14,7 +14,7 @@ For more information on what plugins are and how they work, please refer to the 
 ## Quick Start
 To get up and running quickly, do the following:
 
-- Ensure [ember-cli-deploy-build][2] is installed and configured
+- Ensure ember-cli-deploy and [ember-cli-deploy-build][2] are installed and configured
 
 - Set up firebase in your app
 
