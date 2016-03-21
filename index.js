@@ -16,7 +16,7 @@ module.exports = {
       upload: function(context) {
         var client = require('firebase-tools');
         let outer = this;
-        return client.deploy({}).then(function() {
+        return client.deploy({message:context.revisionData.revisionKey}).then(function() {
           outer.log('it worked yay');
         }).catch(function(err) {
           // handle error
