@@ -57,3 +57,6 @@ ENV["firebase"] = {
   fireBaseAppName: 'your-firebase-app-name'
 }
 ```
+
+[1]: http://ember-cli.github.io/ember-cli-deploy/plugins "Plugin Documentation"
+[2]: https://github.com/ember-cli-deploy/ember-cli-deploy-build "ember-cli-deploy-build"
