@@ -18,7 +18,7 @@ module.exports = {
         if(context.revisionData){
           options.message = context.revisionData.revisionKey;
         }
-        return require('firebase-tools').deploy(options).then(function() {
+        return require('firebase-tools').deploy.hosting(options).then(function() {
           outer.log('it worked yay');
         }).catch(function(err) {
           // handle error
