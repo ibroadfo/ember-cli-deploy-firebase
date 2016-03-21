@@ -61,5 +61,9 @@ ENV["firebase"] = {
 }
 ```
 
+### build.outputPath
+
+If you have customised the location your builds go, we'll pass that on.
+
 [1]: http://ember-cli.github.io/ember-cli-deploy/plugins "Plugin Documentation"
 [2]: https://github.com/ember-cli-deploy/ember-cli-deploy-build "ember-cli-deploy-build"
