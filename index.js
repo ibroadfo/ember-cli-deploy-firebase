@@ -15,7 +15,7 @@ module.exports = {
 
       upload: function(context) {
         var client = require('firebase-tools');
-        let outer = this;
+        const outer = this;
         return client.deploy({
           message: context.revisionData.revisionKey,
           firebase: context.config.fireBaseAppName,
