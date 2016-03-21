@@ -17,8 +17,9 @@ module.exports = {
         var client = require('firebase-tools');
         let outer = this;
         return client.deploy({
-          message:context.revisionData.revisionKey,
+          message: context.revisionData.revisionKey,
           firebase: context.config.fireBaseAppName,
+          public: context.config.build.outputPath,
         }).then(function() {
           outer.log('it worked yay');
         }).catch(function(err) {
