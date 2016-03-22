@@ -9,7 +9,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
+    "test": "./node_modules/mocha/bin/mocha tests/unit/index-nodetest.js"
   },
   "repository": "https://github.com/ibroadfo/ember-cli-deploy-firebase",
   "engines": {
@@ -46,9 +46,12 @@
     "firebase"
   ],
   "dependencies": {
+    "chai": "^3.5.0",
     "ember-cli-babel": "^5.1.5",
     "ember-cli-deploy-plugin": "^0.2.2",
-    "firebase-tools": "^2.2.1"
+    "firebase-tools": "^2.2.1",
+    "mocha": "^2.4.5",
+    "proxyquire": "^1.7.4"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
