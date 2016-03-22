@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-deploy-firebase",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "an ember-cli-deploy plugin to deploy to firebase hosting.",
   "directories": {
     "doc": "doc",
     "test": "tests"
