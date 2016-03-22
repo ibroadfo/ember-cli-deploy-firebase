@@ -17,7 +17,7 @@ module.exports = {
           message: (context.revisionData || {}).revisionKey
         };
         return require('firebase-tools').deploy.hosting(options).then(function() {
-          outer.log('it worked yay');
+          // outer.log('it worked yay');
         }).catch(function(err) {
           // handle error
           outer.log('something bad happened oh no', { color: 'red' });
