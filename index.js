@@ -14,10 +14,8 @@ module.exports = {
         var options = {
           firebase: context.config.fireBaseAppName,
           public: context.config.build.outputPath,
+          message: (context.revisionData || {}).revisionKey
         };
-        if(context.revisionData){
-          options.message = context.revisionData.revisionKey;
-        }
         return require('firebase-tools').deploy.hosting(options).then(function() {
           outer.log('it worked yay');
         }).catch(function(err) {
