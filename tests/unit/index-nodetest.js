@@ -12,8 +12,6 @@ var stubProject = {
   }
 };
 
-
-
 describe('firebase plugin', function() {
   var subject, mockUi;
   var fireStub = {};
@@ -40,12 +38,13 @@ describe('firebase plugin', function() {
 
   describe('calls deploy',function() {
     var plugin;
-        var context;
+    var context;
     fireStub.deploy = {};
     fireStub.deploy.hosting = function (opts) {
       return new Promise(function(resolve,reject) {
-resolve();
-    }); };
+        resolve();
+      });
+    };
     it('uploads the index', function() {
       plugin = subject.createDeployPlugin({name:'firebase' });
       context = {
