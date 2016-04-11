@@ -28,7 +28,7 @@ $ ember install ember-cli-deploy
 $ ember install ember-cli-deploy-build
 ```
 
-- Set up firebase in your app
+- Set up firebase in your app, answering `dist` when asked 'What directory should be the public root?'.
 
 ```bash
 $ firebase init
