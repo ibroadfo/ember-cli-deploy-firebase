@@ -15,6 +15,13 @@ For more information on what plugins are and how they work, please refer to the 
 To get up and running quickly, do the following:
 
 - Ensure ember-cli-deploy and [ember-cli-deploy-build][2] are installed and configured
+- [Sign up for a Firebase account](https://www.firebase.com/signup/)
+- Install the Firebase CLI
+
+```bash
+$ npm install -g firebase-tools
+```
+
 
 - Set up firebase in your app
 
