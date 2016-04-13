@@ -46,6 +46,12 @@ $ ember install ember-cli-deploy-firebase
 $ ember deploy production
 ```
 
+- Open your app!
+
+```bash
+$ firebase open
+```
+
 ## Installation
 Run the following command in your terminal:
 
