@@ -1,6 +1,7 @@
 /* jshint node: true */
 'use strict';
 var BasePlugin = require('ember-cli-deploy-plugin');
+var fbTools = require('firebase-tools');
 
 module.exports = {
   name: 'ember-cli-deploy-firebase',
@@ -16,7 +17,7 @@ module.exports = {
           public: context.config.build.outputPath,
           message: (context.revisionData || {}).revisionKey
         };
-        return require('firebase-tools').deploy.hosting(options).then(function() {
+        return fbTools.deploy.hosting(options).then(function() {
           // outer.log('it worked yay');
         }).catch(function(err) {
           // handle error
