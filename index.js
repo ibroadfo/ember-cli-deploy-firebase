@@ -24,7 +24,7 @@ module.exports = {
           outer.log('something bad happened oh no', { color: 'red' });
           outer.log(err, { color: 'red' });
         });
-      },
+      }
     });
 
     return new DeployPlugin();
