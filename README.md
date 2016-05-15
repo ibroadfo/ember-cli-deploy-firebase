@@ -21,17 +21,10 @@ To get up and running quickly, do the following:
 $ npm install -g firebase-tools
 ```
 
-- Ensure ember-cli-deploy and [ember-cli-deploy-build][2] are installed
+- Install this plugin and its dependencies using the plugin pack
 
 ```bash
-$ ember install ember-cli-deploy
-$ ember install ember-cli-deploy-build
-```
-
-- Install this plugin
-
-```bash
-$ ember install ember-cli-deploy-firebase
+$ ember install ember-cli-deploy-firebase-pack
 ```
 
 - Set up firebase in your app, answering `dist` when asked 'What directory should be the public root?'.
