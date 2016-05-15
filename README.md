@@ -28,16 +28,16 @@ $ ember install ember-cli-deploy
 $ ember install ember-cli-deploy-build
 ```
 
-- Set up firebase in your app, answering `dist` when asked 'What directory should be the public root?'.
-
-```bash
-$ firebase init
-```
-
 - Install this plugin
 
 ```bash
 $ ember install ember-cli-deploy-firebase
+```
+
+- Set up firebase in your app, answering `dist` when asked 'What directory should be the public root?'.
+
+```bash
+$ firebase init
 ```
 
 - Run the pipeline
