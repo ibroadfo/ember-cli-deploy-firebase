@@ -39,8 +39,7 @@ describe('firebase plugin', function() {
   describe('calls deploy',function() {
     var plugin;
     var context;
-    fireStub.deploy = {};
-    fireStub.deploy.hosting = function (opts) {
+    fireStub.deploy = function (opts) {
       return new Promise(function(resolve,reject) {
         resolve();
       });
