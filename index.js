@@ -13,11 +13,11 @@ module.exports = {
       upload: function(context) {
         var outer = this;
         var options = {
-          firebase: context.config.fireBaseAppName,
+          project: context.config.fireBaseAppName,
           public: context.config.build.outputPath,
           message: (context.revisionData || {}).revisionKey
         };
-        return fbTools.deploy.hosting(options).then(function() {
+        return fbTools.deploy(options).then(function() {
           // outer.log('it worked yay');
         }).catch(function(err) {
           // handle error
