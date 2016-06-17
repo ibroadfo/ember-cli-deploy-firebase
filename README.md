@@ -11,6 +11,10 @@ A plugin is an addon that can be executed as a part of the ember-cli-deploy pipe
 
 For more information on what plugins are and how they work, please refer to the [Plugin Documentation][1].
 
+## Compatibility
+
+If you need to continue using firebase 2.x, please use the 0.1.x branch.
+
 ## Quick Start
 To get up and running quickly, do the following:
 
