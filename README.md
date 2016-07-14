@@ -1,4 +1,5 @@
-# ember-cli-deploy-firebase [![Build Status](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase.svg?branch=master)](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase)
+# ember-cli-deploy-firebase [![Build Status](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase.svg?branch=master)](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase) [![ember-cli-deploy compatibility badge](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-cli-deploy-firebase.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
+
 
 > An ember-cli-deploy plugin to deploy your app to firebase hosting.
 
