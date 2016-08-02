@@ -52,7 +52,7 @@
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
     "ember-cli-deploy-plugin": "^0.2.2",
-    "firebase-tools": "git+https://github.com/helmuthb/firebase-tools.git#18e10d10c7c64d261c7a253e7c687d046c1469dc"
+    "firebase-tools": "^3.0.5"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
