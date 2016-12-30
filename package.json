@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-firebase",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "an ember-cli-deploy plugin to deploy to firebase hosting.",
   "keywords": [
     "ember-addon",
