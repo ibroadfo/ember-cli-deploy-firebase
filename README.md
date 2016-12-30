@@ -1,4 +1,4 @@
-# ember-cli-deploy-firebase [![Build Status](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase.svg?branch=master)](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase) [![ember-cli-deploy compatibility badge](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-cli-deploy-firebase.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
+# ember-cli-deploy-firebase [![Build Status](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase.svg?branch=master)](https://travis-ci.org/ibroadfo/ember-cli-deploy-firebase) [![ember-cli-deploy compatibility badge](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-cli-deploy-firebase.svg)](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
 
 
 > An ember-cli-deploy plugin to deploy your app to firebase hosting.
@@ -83,5 +83,5 @@ If you have customised the location your builds go, we'll pass that on.
 
 If you install the [ember-cli-deploy-revision-data](https://github.com/ember-cli-deploy/ember-cli-deploy-revision-data) plugin, its generated revision key will be used as the deploy message.
 
-[1]: http://ember-cli-deploy.github.io/ember-cli-deploy/plugins/ "Plugin Documentation"
+[1]: https://ember-cli-deploy.github.io/ember-cli-deploy/plugins/ "Plugin Documentation"
 [2]: https://github.com/ember-cli-deploy/ember-cli-deploy-build "ember-cli-deploy-build"
