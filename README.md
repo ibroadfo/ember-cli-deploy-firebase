@@ -26,6 +26,12 @@ To get up and running quickly, do the following:
 $ npm install -g firebase-tools
 ```
 
+- Install the ember-cli-deploy tool
+
+```bash
+$ ember install ember-cli-deploy
+```
+
 - Install this plugin and its dependencies using the plugin pack
 
 ```bash
@@ -51,9 +57,10 @@ $ firebase open
 ```
 
 ## Installation
-Run the following command in your terminal:
+Run the following commands in your terminal:
 
 ```bash
+ember install ember-cli-deploy
 ember install ember-cli-deploy-firebase
 ```
 
