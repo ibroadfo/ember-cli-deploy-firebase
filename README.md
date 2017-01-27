@@ -53,7 +53,7 @@ $ ember deploy production
 - Open your app!
 
 ```bash
-$ firebase open
+$ firebase open hosting:site
 ```
 
 ## Installation
