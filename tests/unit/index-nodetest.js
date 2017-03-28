@@ -1,8 +1,9 @@
+/* eslint-env node, mocha, es6 */
 var chai = require("chai");
 var expect    = chai.expect;
 var proxyquire =  require('proxyquire');
 var chaiAsPromised = require("chai-as-promised");
-var should = chai.should();
+chai.should();
 
 chai.use(chaiAsPromised);
 
@@ -39,8 +40,8 @@ describe('firebase plugin', function() {
   describe('calls deploy',function() {
     var plugin;
     var context;
-    fireStub.deploy = function (opts) {
-      return new Promise(function(resolve,reject) {
+    fireStub.deploy = function () {
+      return new Promise(function(resolve) {
         resolve();
       });
     };

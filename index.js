@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 var BasePlugin = require('ember-cli-deploy-plugin');
 var fbTools = require('firebase-tools');
