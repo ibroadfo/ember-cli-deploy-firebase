@@ -6,17 +6,17 @@
 
 This plugin will deploy your ember-cli app to firebase hosting.
 
-## What is an ember-cli-deploy plugin?
+## What is an ember-cli-deploy plugin? ##
 
 A plugin is an addon that can be executed as a part of the ember-cli-deploy pipeline. A plugin will implement one or more of the ember-cli-deploy's pipeline hooks.
 
 For more information on what plugins are and how they work, please refer to the [Plugin Documentation][1].
 
-## Compatibility
+## Compatibility ##
 
 If you need to continue using firebase 2.x, please use the 0.1.x branch.
 
-## Quick Start
+## Quick Start ##
 To get up and running quickly, do the following:
 
 - [Sign up for a Firebase account](https://www.firebase.com/signup/)
@@ -56,7 +56,7 @@ $ ember deploy production
 $ firebase open hosting:site
 ```
 
-## Installation
+## Installation ##
 Run the following commands in your terminal:
 
 ```bash
@@ -64,25 +64,52 @@ ember install ember-cli-deploy
 ember install ember-cli-deploy-firebase
 ```
 
-## ember-cli-deploy Hooks Implemented
+## ember-cli-deploy Hooks Implemented ##
 
 For detailed information on what plugin hooks are and how they work, please refer to the [Plugin Documentation][1].
 
 - `upload`
 
-## Configuration Options
+## Configuration Options ##
 
 For detailed information on how configuration of plugins works, please refer to the [Plugin Documentation][1].
 
-### fireBaseAppName
+### firebase.appName ###
 
 The name of the firebase app you want to deploy to. If not specified, firebase-tools will pick this up from the `firebase.json` file it created in your project directory.
 
 ```
-ENV.fireBaseAppName: 'your-firebase-app-name';
+ENV = {
+  ...
+  firebase: {
+    appName: 'your-firebase-app-name'
+  },
+  ...
+};
 ```
 
-### build.outputPath
+### firebase.deployToken ###
+
+If you have multiple firebase users, it's helpful to use a token instead. You can set
+```
+ENV = {
+  ...
+  firebase: {
+    deployToken: 'asdf1234'
+  },
+  ...
+};
+```
+
+replacing 'asdf1234' with the ```firebase login:ci``` token you receive.
+
+More highly recommended:
+1. Create a .env file in your project root and add ```FIREBASE_DEPLOY_TOKEN="ASDF1234"``` to it, where "ASDF1234" is the ```firebase login:ci``` token you received.
+2. In config/deploy.js, add ```ENV.firebase.deployToken = process.env.FIREBASE_DEPLOY_TOKEN```
+
+After this you should be able to deploy regardless of what account is currently logged in.
+
+### build.outputPath ###
 
 If you have customised the location your builds go, we'll pass that on.
 
