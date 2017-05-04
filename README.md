@@ -89,25 +89,30 @@ ENV = {
 ```
 
 ### firebase.deployToken ###
+If you have multiple firebase users, it's helpful to use a token instead.
 
-If you have multiple firebase users, it's helpful to use a token instead. You can set
+#### Option 1 (Recommended) ####
+1. Run ```firebase login:ci``` and add the code to your ~/.bashrc or ~/.profile: ```export FIREBASE_TOKEN=ASDF1234```, replacing ASDF1234 with whatever token you received from the previous command.
+2. Run ```source ~/.bashrc``` or ```source ~/.profile``` depending on the above.
+3. Congrats! Your project should run ```ember deploy production``` as well as other firebase-tools commands successfully, no addition to config/deploy.js needed.
+4. You can always still add ```ENV.firebase.deployToken = process.env.FIREBASE_TOKEN``` but it is not necessary.
+
+#### Option 2 ####
+1. Run ```firebase login:ci``` and copy the code you receive.
+2. (optional) Create a file in the project root ```.env.deploy.production``` and add ```FIREBASE_TOKEN=ASDF1234``` replacing ASDF1234 with the code from step 1.
+3. In config/deploy.js
 ```
 ENV = {
   ...
   firebase: {
     deployToken: 'asdf1234'
+    // deployToken: process.env.FIREBASE_TOKEN (if .env stuff is your style)
   },
   ...
 };
 ```
 
-replacing 'asdf1234' with the ```firebase login:ci``` token you receive.
-
-More highly recommended:
-1. Create a .env file in your project root and add ```FIREBASE_DEPLOY_TOKEN="ASDF1234"``` to it, where "ASDF1234" is the ```firebase login:ci``` token you received.
-2. In config/deploy.js, add ```ENV.firebase.deployToken = process.env.FIREBASE_DEPLOY_TOKEN```
-
-After this you should be able to deploy regardless of what account is currently logged in.
+**After this you should be able to deploy regardless of what account is currently logged in.**
 
 ### build.outputPath ###
 
