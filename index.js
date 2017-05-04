@@ -12,11 +12,15 @@ module.exports = {
 
       upload: function(context) {
         var outer = this;
+        var project = context.config.firebase.appName || context.config.fireBaseAppName;
         var options = {
-          project: context.config.fireBaseAppName,
+          project: project,
           public: context.config.build.outputPath,
           message: (context.revisionData || {}).revisionKey
         };
+        if (context.config.firebase.deployToken || process.env.FIREBASE_TOKEN) {
+          options.token = context.config.firebase.deployToken || process.env.FIREBASE_TOKEN;
+        }
         return fbTools.deploy(options).then(function() {
           // outer.log('it worked yay');
         }).catch(function(err) {

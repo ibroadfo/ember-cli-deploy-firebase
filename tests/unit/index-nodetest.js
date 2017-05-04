@@ -50,7 +50,14 @@ describe('firebase plugin', function() {
       context = {
         ui: mockUi,
         project: stubProject,
-        config: { fireBaseAppName: 'dont-test-me', build: {outputPath: './dist'},}
+        config: {
+          fireBaseAppName: 'dont-test-me',
+          firebase: {
+            appName: 'dont-test-me-object',
+            deployToken: 'deploy-token-1234'
+          },
+          build: {outputPath: './dist'},
+        }
       };
       return plugin.upload(context).should.be.fulfilled;
     });
