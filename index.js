@@ -16,7 +16,8 @@ module.exports = {
         var options = {
           project: project,
           public: context.config.build.outputPath,
-          message: (context.revisionData || {}).revisionKey
+          message: (context.revisionData || {}).revisionKey,
+          verbose: context.ui.verbose
         };
         if (context.config.firebase.deployToken || process.env.FIREBASE_TOKEN) {
           options.token = context.config.firebase.deployToken || process.env.FIREBASE_TOKEN;
