@@ -59,6 +59,8 @@ describe('firebase plugin', function() {
           build: {outputPath: './dist'},
         }
       };
+      plugin.beforeHook(context);
+      plugin.configure(context);
       return plugin.upload(context).should.be.fulfilled;
     });
   });
