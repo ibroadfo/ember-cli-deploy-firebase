@@ -22,9 +22,9 @@ module.exports = {
         if (context.config.firebase.deployToken || process.env.FIREBASE_TOKEN) {
           options.token = context.config.firebase.deployToken || process.env.FIREBASE_TOKEN;
         }
-        return fbTools.deploy(options).then(() => {
+        return fbTools.deploy(options).then(function() {
           outer.log('successful deploy!', {verbose: true});
-        }).catch((err) => {
+        }).catch(function(err) {
           // handle error
           outer.log('something bad happened oh no', { color: 'red' });
           outer.log(err, { color: 'red' });
