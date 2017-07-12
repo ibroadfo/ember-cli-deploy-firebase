@@ -11,6 +11,7 @@ module.exports = {
       name: options.name,
 
       upload: function(context) {
+        var outer = this;
         var project = context.config.firebase.appName || context.config.fireBaseAppName;
         var options = {
           project: project,
@@ -22,12 +23,12 @@ module.exports = {
           options.token = context.config.firebase.deployToken || process.env.FIREBASE_TOKEN;
         }
         return fbTools.deploy(options).then(() => {
-          this.log('successful deploy!', {verbose: true});
+          outer.log('successful deploy!', {verbose: true});
         }).catch((err) => {
           // handle error
-          this.log('something bad happened oh no', { color: 'red' });
-          this.log(err, { color: 'red' });
-          this.log(err.stack, { color: 'red' });
+          outer.log('something bad happened oh no', { color: 'red' });
+          outer.log(err, { color: 'red' });
+          outer.log(err.stack, { color: 'red' });
         });
       }
     });
