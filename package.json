@@ -20,7 +20,7 @@
     "test": "./node_modules/mocha/bin/mocha  --timeout 15000 tests/unit/index-nodetest.js"
   },
   "dependencies": {
-    "ember-cli-babel": "^5.1.7",
+    "ember-cli-babel": "^6.6.0",
     "ember-cli-deploy-plugin": "^0.2.2",
     "firebase-tools": "^5.0.0"
   },
